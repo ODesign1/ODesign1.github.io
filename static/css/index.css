@@ -759,5 +759,18 @@ a:focus {
   margin: 0 auto;
 }
 
+/* Ensure architecture boxes share the same height */
+#inference-flow .columns {
+  align-items: stretch;
+}
+
+#inference-flow .column {
+  display: flex;
+}
+
+#inference-flow .column .box {
+  flex: 1;
+}
+
 
 
