@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="ODesign: A World Model for Biomolecular Interaction Design">
+  <meta name="description" content="ODesign delivers end-to-end biomolecular design across proteins, nucleic acids, ligands, and complexes with full-atom fidelity.">
+  <meta name="keywords" content="ODesign, protein design, full-atom modeling, inverse folding, biomolecular engineering">
+  <meta name="author" content="ODesign Team">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ODesign">
+  <meta property="og:title" content="ODesign: A World Model for Biomolecular Interaction Design">
+  <meta property="og:description" content="ODesign provides a unified world model for atomic-level biomolecular design, inference, and evaluation.">
+  <meta property="og:url" content="https://odesign1.github.io">
+  <meta property="og:image" content="https://odesign1.github.io/static/images/figure_0.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ODesign main figure">
+  <meta property="article:published_time" content="2025-10-25T00:00:00.000Z">
+  <meta property="article:author" content="ODesign Team">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Protein Design">
+  <meta property="article:tag" content="Computational Biology">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ODesignTeam">
+  <meta name="twitter:creator" content="@ODesignTeam">
+  <meta name="twitter:title" content="ODesign: A World Model for Biomolecular Interaction Design">
+  <meta name="twitter:description" content="ODesign brings full-atom design workflows to proteins, nucleic acids, ligands, and complexes.">
+  <meta name="twitter:image" content="https://odesign1.github.io/static/images/figure_0.png">
+  <meta name="twitter:image:alt" content="ODesign main figure">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="ODesign: A World Model for Biomolecular Interaction Design">
+  <meta name="citation_author" content="ODesign Team">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="ODesign Project">
+  <meta name="citation_pdf_url" content="https://odesign1.github.io">
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>ODesign | A World Model for Biomolecular Interaction Design</title>
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <style>
+    h2.title, h3.title, .title.is-2, .title.is-3, .title.is-4, .title.is-5 {
+      color: #4C3F91 !important;
+    }
+    .publication-title span {
+      color: #4C3F91 !important;
+    }
+  </style>
+
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+    <section class="hero hero-main is-light" id="overview">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="has-text-centered">
+            <figure class="image" style="max-width: 30%; margin: 0 auto 2rem auto;">
+              <img src="static/images/odesign.svg" alt="ODesign logo" loading="lazy">
+            </figure>
+            <h1 class="title is-1 publication-title"><span style="color: #4C3F91;">ODesign:</span> A World Model for Biomolecular Interaction Design</h1>
+            <!-- <p class="subtitle is-4">
+              an all-atom generative world model for all-to-all biomolecular interaction design
+              A unified world model that co-designs proteins, nucleic acids, ligands, and complexes with atomic accuracy and differentiable control.
+            </p> -->
+            <div class="is-size-6 publication-authors" style="line-height: 1.8;">
+              <span class="author-block">
+                Odin Zhang<sup>1,3,5,*,†</sup>, 
+                Xujun Zhang<sup>1,3,*</sup>, 
+                Haitao Lin<sup>1,5,*</sup>, 
+                Cheng Tan<sup>5,6,*</sup>, 
+                Qinghan Wang<sup>1,3,*</sup>, 
+                Yuanle Mo<sup>1,5,*</sup>, 
+                Qiantai Feng<sup>4,6,*</sup>, 
+                Gang Du<sup>1,3</sup>, 
+                Yuntao Yu<sup>1,3</sup>, 
+                Zichang Jin<sup>1,3</sup>, 
+                Ziyi You<sup>1,3</sup>, 
+                Peicong Lin<sup>1</sup>, 
+                Yijie Zhang<sup>7</sup>, 
+                Yuyang Tao<sup>1</sup>, 
+                Shicheng Chen<sup>3</sup>, 
+                Jack Xiaoyu Chen<sup>8</sup>, 
+                Chenqing Hua<sup>7</sup>, 
+                Weibo Zhao<sup>5</sup>, 
+                Runze Ma<sup>1,2</sup>, 
+                Yunpeng Xia<sup>1</sup>, 
+                Kejun Ying<sup>1</sup>, 
+                Jun Li<sup>9</sup>, 
+                Yundian Zeng<sup>3</sup>, 
+                Lijun Lang<sup>5</sup>, 
+                Peichen Pan<sup>3</sup>, 
+                Hanqun Cao<sup>5</sup>, 
+                Zihao Song<sup>10</sup>, 
+                Bo Qiang<sup>10</sup>, 
+                Jiaqi Wang<sup>10</sup>, 
+                Pengfei Ji<sup>11</sup>, 
+                Lei Bai<sup>5</sup>, 
+                Jian Zhang<sup>12</sup>, 
+                Chang-yu Hsieh<sup>3</sup>, 
+                Pheng Ann Heng<sup>5,†</sup>, 
+                Siqi Sun<sup>6,†</sup>, 
+                Tingjun Hou<sup>3,†</sup>, 
+                Shuangjia Zheng<sup>2,1,†</sup>
+              </span>
+            </div>
+            <div class="is-size-6 publication-authors">
+               <span class="author-block">
+                 <sup>1</sup>Lingang Laboratory, Shanghai, China<br>
+                 <sup>2</sup>Global Institute of Future Technology, Shanghai Jiao Tong University, Shanghai, China<br>
+                 <sup>3</sup>College of Pharmaceutical Sciences, Zhejiang University, Zhejiang, China<br>
+                 <sup>4</sup>Research Institute of Intelligent Complex Systems, Fudan University, Shanghai, China<br>
+                 <sup>5</sup>Department of Computer Science and Engineering, The Chinese University of Hong Kong, Hong Kong, China<br>
+                 <sup>6</sup>Shanghai Artificial Intelligence Laboratory, Shanghai, China<br>
+                 <sup>7</sup>McGill University, Montreal, Canada<br>
+                 <sup>8</sup>Institute for Medical Engineering Science and Department of Biological Engineering, Massachusetts Institute of Technology, Cambridge, MA, USA<br>
+                 <sup>9</sup>T. H. Chan School of Public Health, Harvard University, Boston, MA, USA<br>
+                 <sup>10</sup>Department of Biochemistry, University of Washington, Seattle, WA, USA<br>
+                 <sup>11</sup>Institute of Catalysis, Department of Chemistry, Zhejiang University, Hangzhou, China<br>
+                 <sup>12</sup>School of Medicine, Shanghai Jiao Tong University, Shanghai, China
+               </span>
+                <span class="eql-cntrb"><small><br><sup>*</sup>Equal contribution &nbsp;&nbsp; <sup>†</sup>Corresponding authors</small></span>
+              </div>
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://odesign.lglab.ac.cn/" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-cloud"></i></span>
+                  <span>Web Server</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="./static/pdfs/technical_report.pdf" target="_blank" rel="noopener" class="external-link button is-normal is-rounded">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Technical Report</span>
+                </a>
+              </span>
+        
+            </div>
+          </div>
+          <!-- <div class="mt-6 has-text-centered">
+            <figure class="image main-figure" style="max-width: 80%; margin: 0 auto;">
+              <img src="static/images/figure_0.png" alt="ODesign main results showcasing target and designed biomolecular complexes" loading="lazy">
+            </figure>
+            <p class="has-text-grey has-text-centered is-size-6 mt-3">
+              ODesign is an All-to-All design framework that simultaneously models targets </span>(grey) and designed structures (violet) across proteins, nucleic acids, and ligand complexes.
+            </p>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <!-- TODO: Replace with your teaser video -->
+          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+            <!-- TODO: Add your video file path here -->
+            <source src="static/videos/odesign.mp4" type="video/mp4">
+          </video>
+          <!-- TODO: Replace with your video description -->
+          <!-- <h2 class="subtitle has-text-centered">
+            Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+          </h2> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero" id="abstract">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Biomolecular interactions underpin almost all biological processes, and their rational design is central to programming new biological functions. Generative AI models have emerged as powerful tools for molecular design, yet most remain specialized for individual molecular types and lack fine-grained control over interaction details. Here we present ODesign, an all-atom generative world model for all-to-all biomolecular interaction design. ODesign allows scientists to specify epitopes on arbitrary targets and generate diverse classes of binding partners with fine-grained control. Across entity-, token-, and atom-level benchmarks in the protein modality, ODesign demonstrates superior controllability and performance to modality-specific baselines. Extending beyond proteins, it generalizes to nucleic acid and small-molecule design, enabling interaction types such as protein-binding RNA/DNA and RNA/DNA-binding ligands that were previously inaccessible. By unifying multimodal biomolecular interactions within a single generative framework, ODesign moves toward a general-purpose molecular world model capable of programmable design.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="section hero is-light" id="highlights">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Highlights</h2>
+        <div class="content">
+          <ul>
+            <li><strong>First-of-its-kind all-to-all world model:</strong> Unified framework enables cross-modality molecular generation—proteins, nucleic acids, and small molecules—within a single architecture built upon AlphaFold3-like structure prediction.</li>
+            <li><strong>Multi-level controllable generation:</strong> Task-oriented masking mechanism provides fine-grained conditional control at entity-, token-, and atom-levels, supporting binder design, motif scaffolding, and atomic motif engineering.</li>
+            <li><strong>Flexible and rigid design modes:</strong> Supports both fixed-target (rigid receptor) and co-design (flexible receptor) strategies, enabling epitope-specific generation through hotspot residue guidance.</li>
+            <li><strong>Superior performance and throughput:</strong> Consistently outperforms modality-specific baselines across 11 benchmark tasks, achieving 2-4 orders of magnitude improvement in design throughput with minutes per sample.</li>
+            <li><strong>Previously inaccessible interactions:</strong> Enables novel design capabilities including protein-binding RNA/DNA aptamers and nucleic acid-binding small molecules that were computationally infeasible before.</li>
+          </ul>
+        </div>
+        <div class="mt-6 has-text-centered">
+            <figure class="image main-figure" style="max-width: 80%; margin: 0 auto;">
+              <img src="static/images/figure_0.png" alt="ODesign main results showcasing target and designed biomolecular complexes" loading="lazy">
+            </figure>
+            <p class="has-text-grey has-text-centered is-size-6 mt-3">
+              ODesign is an All-to-All design framework that simultaneously models targets </span>(grey) and designed structures (violet) across proteins, nucleic acids, and ligand complexes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <!-- Video carousel -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3 has-text-centered">Design cases</h2>
+          <!-- <h2 class="title is-3">Design cases</h2> -->
+          <p class="subtitle has-text-centered is-size-5 mb-5">
+            Showcasing the dynamic design process of protein, cyclic peptides, nucleic acids and ligand molecules.
+          </p>
+          <div id="results-carousel" class="carousel results-carousel" style="max-width: 50%; margin: 0 auto;">
+            <div class="item item-video1">
+              <!-- TODO: Add poster image for better preview -->
+              <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+                <!-- Your video file here -->
+                <source src="static/videos/protein_reversed.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video2">
+              <!-- TODO: Add poster image for better preview -->
+              <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+                <!-- Your video file here -->
+                <source src="static/videos/cyclic_peptide_reversed.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video3">
+              <!-- TODO: Add poster image for better preview -->
+              <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
+                <!-- Your video file here -->
+                <source src="static/videos/RNA_reversed.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video4">
+              <!-- TODO: Add poster image for better preview -->
+              <video poster="" id="video4" controls muted loop height="100%" preload="metadata">
+                <!-- Your video file here -->
+                <source src="static/videos/ligand_reversed.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="inference-flow">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Architecture</h2>
+        <figure class="image mb-5" style="max-width: 90%; margin: 0 auto 3rem auto;">
+          <img src="static/images/structure.jpg" alt="ODesign architecture overview showing the five core modules" loading="lazy">
+        </figure>
+        <div class="columns is-variable is-5 is-multiline">
+          <div class="column is-one-third">
+            <div class="box">
+              <h3 class="title is-5">1. Embedding Module</h3>
+              <p class="is-size-6">Unified generative tokens abstract minimal chemical units across modalities. Target 3D structures are incorporated as initial coordinates and distance constraints.</p>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="box">
+              <h3 class="title is-5">2. Conditional Module</h3>
+              <p class="is-size-6">Dual control mechanism: initial coordinate "guess" and distance-based interaction modeling. Hotspot residue features enable epitope-specific design.</p>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="box">
+              <h3 class="title is-5">3. OInvFold Module</h3>
+              <p class="is-size-6">Unified inverse folding assigns sequences to protein/nucleic acid backbones and atom types to ligand scaffolds with modality-specific decoders.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero" id="in-silico">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">In-silico Performance</h2>
+        <p class="subtitle has-text-centered is-size-5 mb-5">
+          ODesign consistently outperforms modality-specific baselines across protein, nucleic acid, and ligand design benchmarks.
+        </p>
+        
+        <div class="mb-6">
+          <h3 class="title is-4 has-text-centered mb-4" style="color: #8b5cf6;">Protein Design</h3>
+          <figure class="image" style="max-width: 95%; margin: 0 auto;">
+            <img src="static/images/protein_design.png" alt="Protein design performance across binder design, motif scaffolding, and atomic scaffolding tasks" loading="lazy">
+          </figure>
+          <p class="has-text-grey has-text-centered is-size-6 mt-3">
+            Performance on protein-centric benchmarks: binder design, ligand-binding protein design, motif scaffolding, interface design, and atomic motif scaffolding
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="title is-4 has-text-centered mb-4" style="color: #8b5cf6;">Nucleic Acid Design</h3>
+          <figure class="image" style="max-width: 95%; margin: 0 auto;">
+            <img src="static/images/na_design.png" alt="Nucleic acid design performance for RNA and DNA generation and protein-binding aptamers" loading="lazy">
+          </figure>
+          <p class="has-text-grey has-text-centered is-size-6 mt-3">
+            Performance on nucleic acid benchmarks: RNA/DNA monomer design and protein-binding RNA/DNA aptamer design
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="title is-4 has-text-centered mb-4" style="color: #8b5cf6;">Ligand Design</h3>
+          <figure class="image" style="max-width: 95%; margin: 0 auto;">
+            <img src="static/images/ligand_design.png" alt="Small molecule design performance for protein-binding, DNA-binding, and RNA-binding ligands" loading="lazy">
+          </figure>
+          <p class="has-text-grey has-text-centered is-size-6 mt-3">
+            Performance on ligand-centric benchmarks: protein-binding, DNA-binding, and RNA-binding small molecule design
+          </p>
+        </div>
+      </div>
+    </section>
+
+  <section class="section hero is-light" id="server">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered"><a href="https://odesign.lglab.ac.cn/" target="_blank" rel="noopener">Web Server</a></h2>
+      <p class="subtitle has-text-centered">Design your targets in the browser with zero setup—no installs required.</p>
+      <figure class="image server-figure">
+        <img src="static/images/server.png" alt="Screenshot of the ODesign web server interface" loading="lazy" style="width:100%;height:auto;display:block;margin:0 auto;max-width:100%;">
+      </figure>
+    </div>
+  </section>
+
+    <section class="section hero" id="contact">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Contact Us</h2>
+        <div class="columns is-variable is-6 is-centered contact-qr-grid">
+          <div class="column is-one-third has-text-centered">
+            <figure class="image contact-qr">
+              <img src="static/contact/server.jpg" alt="Server QR code" loading="lazy">
+            </figure>
+            <p class="is-size-6 has-text-weight-semibold mt-3">Server</p>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <figure class="image contact-qr">
+              <img src="static/contact/wechat.jpg" alt="WeChat QR code" loading="lazy">
+            </figure>
+            <p class="is-size-6 has-text-weight-semibold mt-3">WeChat</p>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <figure class="image contact-qr">
+              <img src="static/contact/whatsapp.jpg" alt="WhatsApp QR code" loading="lazy">
+            </figure>
+            <p class="is-size-6 has-text-weight-semibold mt-3">WhatsApp</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  <!-- <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@article{YourPaperKey2024,
+    title={Your Paper Title Here},
+    author={First Author and Second Author and Third Author},
+    journal={Conference/Journal Name},
+    year={2024},
+    url={https://your-domain.com/your-project-page}
+  }</code></pre>
+      </div>
+  </section> -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
